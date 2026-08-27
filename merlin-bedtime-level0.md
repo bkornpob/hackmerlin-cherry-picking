@@ -24,6 +24,12 @@ covers:
 
 </div>
 
+<div class='book-cover-audio'>
+
+<audio controls src="tts-audios/merlin-bedtime-level0-semaine.mp3" style="width:100%;margin:8px 0"></audio>
+
+</div>
+
 <div class='book-intro'>
 
 welcome, seeker. pull up a chair by the fire.
