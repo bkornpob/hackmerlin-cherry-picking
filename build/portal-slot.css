@@ -1,0 +1,94 @@
+/* ============================================================================
+   portal-slot.css — shared slot-element styling for MLC portals
+   Loaded AFTER the theme (og/zaddy/dab/gdk) so tables/labels/markdown
+   elements render consistently regardless of theme. Theme sets the palette
+   via CSS vars (--bg/--ink/--accent/--border); this file uses them.
+   ============================================================================ */
+
+.slot-book-cover-image img,
+.slot-page-image img {
+  display: block;
+  max-width: 320px;
+  margin: 1.2rem auto;
+  border-radius: 12px;
+  border: 1px solid var(--border, #333);
+  box-shadow: 0 0 22px rgba(255, 90, 140, 0.18);
+}
+
+.slot-book-title .label,
+.label {
+  display: inline-block;
+  min-width: 5.5em;
+  font-weight: 600;
+  color: var(--accent, #ff5a8c);
+  letter-spacing: 0.03em;
+}
+
+.slot-book-title p,
+.slot-page-content p,
+.slot-book-intro p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.slot-book-title ul,
+.slot-page-content ul {
+  margin: 0.6rem 0;
+  padding-left: 1.4rem;
+}
+
+.slot-book-title li,
+.slot-page-content li {
+  margin: 0.25rem 0;
+  line-height: 1.55;
+}
+
+/* TOC / any markdown table -> styled */
+.slot-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border, #333);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slot-table th,
+.slot-table td {
+  border: 1px solid var(--border, #333);
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.slot-table th {
+  background: rgba(255, 90, 140, 0.10);
+  color: var(--accent, #ff5a8c);
+  font-weight: 600;
+}
+
+.slot-table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.slot-book-media-ads iframe {
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  margin: 0.8rem 0;
+}
+
+.slot-page-links a,
+.slot-book-intro a {
+  color: var(--accent, #ff5a8c);
+  text-decoration: none;
+}
+
+.slot-page-links a:hover,
+.slot-book-intro a:hover {
+  text-decoration: underline;
+}

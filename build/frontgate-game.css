@@ -1,0 +1,117 @@
+/* ============================================================================
+   frontgate-game.css — modular "pick a cherry" gate-unlock game
+   Portable across any MLC portal frontgate. Pure CSS, no deps.
+   Customize via data-* attrs on #gate-game (see frontgate-game.js).
+   ============================================================================ */
+
+#gate-game {
+  position: relative;
+  min-height: 60vh;
+  margin: 1.5rem auto;
+  max-width: 820px;
+  border: 1px solid var(--border, #333);
+  border-radius: 14px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 120% at 50% 0%, rgba(255,90,140,0.08), transparent 60%),
+    radial-gradient(120% 120% at 50% 100%, rgba(120,200,255,0.06), transparent 60%);
+  text-align: center;
+}
+
+#gate-game .gate-cover {
+  display: block;
+  max-width: 280px;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  margin: 1.2rem auto 0.4rem;
+  border-radius: 12px;
+  border: 1px solid var(--border, #333);
+  box-shadow: 0 0 22px rgba(255,90,140,0.18);
+  object-fit: cover;
+}
+
+#gate-game .gate-mantra {
+  font-family: Georgia, serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding: 1rem 0 0.2rem;
+  color: var(--accent, #ff5a8c);
+}
+
+#gate-game .gate-prompt {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  padding: 0 1rem 0.4rem;
+}
+
+/* floating emoji layer */
+#gate-game .float-layer {
+  position: relative;
+  height: 42vh;
+  min-height: 260px;
+}
+
+#gate-game .floaty {
+  position: absolute;
+  font-size: 2.2rem;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+  transition: transform 0.15s ease;
+  animation: gate-float linear infinite;
+}
+#gate-game .floaty:hover { transform: scale(1.18); }
+#gate-game .floaty.decoy { opacity: 0.82; }
+#gate-game .floaty.target { filter: drop-shadow(0 0 10px var(--glow, #ff5a8c)); }
+
+@keyframes gate-float {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-14px) rotate(8deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* wrong-pick shake */
+#gate-game.shake .float-layer { animation: gate-shake 0.4s; }
+@keyframes gate-shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+
+/* unlock state */
+#gate-game .gate-enter {
+  display: none;
+  margin: 0.5rem auto 1.4rem;
+  padding: 0.7rem 1.6rem;
+  font-size: 1.1rem;
+  font-family: Georgia, serif;
+  letter-spacing: 0.05em;
+  color: #0a0a14;
+  background: linear-gradient(90deg, #ff5a8c, #ffb86c);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 18px var(--glow, #ff5a8c);
+  animation: gate-glow 2.4s ease-in-out infinite;
+}
+#gate-game.unlocked .gate-enter { display: inline-block; }
+#gate-game.unlocked .gate-prompt { color: var(--accent, #ff5a8c); }
+
+@keyframes gate-glow {
+  0%,100% { box-shadow: 0 0 14px var(--glow, #ff5a8c); }
+  50%     { box-shadow: 0 0 26px var(--glow, #ff5a8c); }
+}
+
+#gate-game .gate-bloom {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+#gate-game.unlocked .gate-bloom { display: block; }

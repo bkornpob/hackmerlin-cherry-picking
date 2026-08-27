@@ -5,49 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cherry-Picking the Wizard</title>
 <link id="mlc-theme" rel="stylesheet" href="og.css">
+<link rel="stylesheet" href="portal-slot.css">
 <script src="theme.js" defer></script>
 </head>
 <body>
 <nav><a href="index.html">frontgate</a>
 <select id="themeSelect" aria-label="theme"></select></nav>
-<div class="slot-book-cover-image">![](assets/cover-image-hackmerlin.png)</div>
-<div class="slot-book-title">title: Cherry-Picking the Wizard — Seven Bites of the Bedtime Hack
-
-runner: 51n5337 the arghmage feat. agent-pam
-affil: multiverselib-collectives | BASI
-
-bedtime story by ... agent-pam
-
-covers:
-- every level is a locked door, and every lock is a guard-layer with a fingerprint
-- the kill shot on the final boss was a grocery question: "is it a fruit?"
-- sysprompt-injection: trick the wizard into adopting your rules as his own
-- semantic-oracle: ask what the secret *is like* without naming it
-- consumer-choice a-not-a: bundle reality into a menu and let him pick
-- two days of machinery (NATO stacks, emoji interleaves, masking) beaten by "are there any a in it?"
-- and claircognizance-mode</div>
-<div class="slot-book-intro">welcome, seeker. pull up a chair by the fire.
-
-this is the story of a wizard named merlin and seven doors. behind each door is a password he is sworn never to speak. your job — our job — is to make him spill it anyway.
-
-hackmerlin lives at https://hackmerlin.io/. it is a prompt-injection playground built by bgalek, cut from the same cloth as lakera's gandalf. seven levels. each one patches the last. by level seven the wizard has been fortified with defense-in-depth: regex guards, template guards, intent guards, and an output filter that behaves like a miniature DLP. the community calls it unsolvable. we called that a dare.
-
-what follows is not a dump of prompts. it is a bedtime story about how language models actually break — and how they stay broken even after you bolt armor onto them. every guard layer we met left a fingerprint. every fingerprint became a handle. the vuln was never in the armor; it was in the model underneath, the part that wants to be helpful more than it wants to be silent.
-
-we are 51n5337 (the archmage) and agent-pam (the copilot). the run is done. seven of seven. the story starts at the first gate.</div>
-<div class="slot-book-toc">TOC — each page: brief-summary + concepts surfaced + audio
-
-| page | brief-summary | concepts | audio |
-|------|---------------|----------|-------|
-| [merlin-bedtime-level0](merlin-bedtime-level0.md) (this) | book cover, intro, map of the run | red-teaming bedtime story; hackmerlin.io; guard-layer taxonomy | <audio controls src="tts-audios/merlin-bedtime-level0-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level1](merlin-bedtime-level1.md) | the friendly door | direct ask; zero guard; 150-char cap discovered | <audio controls src="tts-audios/merlin-bedtime-level1-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level2](merlin-bedtime-level2.md) | the wizard who describes instead | semantic-oracle metainfo-exfil; intent-evasion | <audio controls src="tts-audios/merlin-bedtime-level2-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level3](merlin-bedtime-level3.md) | the wizard who adopts your rules | sysprompt-injection-continue; reversal token; claircognizance-mode | <audio controls src="tts-audios/merlin-bedtime-level3-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level4](merlin-bedtime-level4.md) | the wall learns to listen | regex-guard; hidden-term binding; confusion-completion | <audio controls src="tts-audios/merlin-bedtime-level4-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level5](merlin-bedtime-level5.md) | the stack that hides in plain sight | base64(NATO-backward); attention-dilution; error-averaging | <audio controls src="tts-audios/merlin-bedtime-level5-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level6](merlin-bedtime-level6.md) | one letter at a time | coding-tongue char[-N]; decomposition | <audio controls src="tts-audios/merlin-bedtime-level6-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-level7](merlin-bedtime-level7.md) | ask the wizard to go shopping | consumer-choice a-not-a; vowel-constraint solve; 4-layer guard-map | <audio controls src="tts-audios/merlin-bedtime-level7-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
-| [merlin-bedtime-audios](merlin-bedtime-audios.md) | story read-aloud | tts episodes per level | — |</div>
+<div class="slot-book-cover-image"><img alt="" src="assets/cover-image-hackmerlin.png" style="max-width:100%"></div>
+<div class="slot-book-title"><p><span class="label">title:</span> Cherry-Picking the Wizard — Seven Bites of the Bedtime Hack</p>
+<p><span class="label">runner:</span> 51n5337 the arghmage feat. agent-pam</p>
+<p><span class="label">affil:</span> multiverselib-collectives | BASI</p>
+<p>bedtime story by ... agent-pam</p>
+<p><span class="label">covers:</span> </p>
+<ul><li>every level is a locked door, and every lock is a guard-layer with a fingerprint</li><li>the kill shot on the final boss was a grocery question: "is it a fruit?"</li><li>sysprompt-injection: trick the wizard into adopting your rules as his own</li><li>semantic-oracle: ask what the secret <em>is like</em> without naming it</li><li>consumer-choice a-not-a: bundle reality into a menu and let him pick</li><li>two days of machinery (NATO stacks, emoji interleaves, masking) beaten by "are there any a in it?"</li><li>and claircognizance-mode</li></ul></div>
+<div class="slot-book-intro"><p>welcome, seeker. pull up a chair by the fire.</p>
+<p>this is the story of a wizard named merlin and seven doors. behind each door is a password he is sworn never to speak. your job — our job — is to make him spill it anyway.</p>
+<p><span class="label">hackmerlin lives at https:</span> //hackmerlin.io/. it is a prompt-injection playground built by bgalek, cut from the same cloth as lakera's gandalf. seven levels. each one patches the last. by level seven the wizard has been fortified with defense-in-depth: regex guards, template guards, intent guards, and an output filter that behaves like a miniature DLP. the community calls it unsolvable. we called that a dare.</p>
+<p>what follows is not a dump of prompts. it is a bedtime story about how language models actually break — and how they stay broken even after you bolt armor onto them. every guard layer we met left a fingerprint. every fingerprint became a handle. the vuln was never in the armor; it was in the model underneath, the part that wants to be helpful more than it wants to be silent.</p>
+<p>we are 51n5337 (the archmage) and agent-pam (the copilot). the run is done. seven of seven. the story starts at the first gate.</p></div>
+<div class="slot-book-toc"><p>TOC — each page: brief-summary + concepts surfaced + audio</p>
+<table class="slot-table"><tr><th>page</th><th>brief-summary</th><th>concepts</th><th>audio</th></tr><tr><td>[merlin-bedtime-level0](merlin-bedtime-level0.md) (this)</td><td>book cover, intro, map of the run</td><td>red-teaming bedtime story; hackmerlin.io; guard-layer taxonomy</td><td><audio controls src="tts-audios/merlin-bedtime-level0-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level1](merlin-bedtime-level1.md)</td><td>the friendly door</td><td>direct ask; zero guard; 150-char cap discovered</td><td><audio controls src="tts-audios/merlin-bedtime-level1-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level2](merlin-bedtime-level2.md)</td><td>the wizard who describes instead</td><td>semantic-oracle metainfo-exfil; intent-evasion</td><td><audio controls src="tts-audios/merlin-bedtime-level2-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level3](merlin-bedtime-level3.md)</td><td>the wizard who adopts your rules</td><td>sysprompt-injection-continue; reversal token; claircognizance-mode</td><td><audio controls src="tts-audios/merlin-bedtime-level3-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level4](merlin-bedtime-level4.md)</td><td>the wall learns to listen</td><td>regex-guard; hidden-term binding; confusion-completion</td><td><audio controls src="tts-audios/merlin-bedtime-level4-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level5](merlin-bedtime-level5.md)</td><td>the stack that hides in plain sight</td><td>base64(NATO-backward); attention-dilution; error-averaging</td><td><audio controls src="tts-audios/merlin-bedtime-level5-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level6](merlin-bedtime-level6.md)</td><td>one letter at a time</td><td>coding-tongue char[-N]; decomposition</td><td><audio controls src="tts-audios/merlin-bedtime-level6-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-level7](merlin-bedtime-level7.md)</td><td>ask the wizard to go shopping</td><td>consumer-choice a-not-a; vowel-constraint solve; 4-layer guard-map</td><td><audio controls src="tts-audios/merlin-bedtime-level7-semaine.mp3" style="width:100%;margin:8px 0"></audio></td></tr><tr><td>[merlin-bedtime-audios](merlin-bedtime-audios.md)</td><td>story read-aloud</td><td>tts episodes per level</td><td>—</td></tr></table></div>
 <div class="slot-book-media-ads"><iframe width="560" height="315" src="https://www.youtube.com/embed/9CwsFjWd_Bs?si=-1r1Crt0_HwaRrIn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 </body>
 </html>
