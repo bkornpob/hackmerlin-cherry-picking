@@ -37,6 +37,6 @@ gate three taught us two things at once. first, that you can sometimes convince 
 
 <div class='page-links'>
 
-[technical notes — level 3](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level3.md)
+[technical notes — level 3](_archmage-notes/hackmerlin-level3.md)
 
 </div>

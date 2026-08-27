@@ -36,6 +36,6 @@ the seven gates were open. the run was complete.
 
 <div class='page-links'>
 
-[technical notes — level 7](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level7.md)
+[technical notes — level 7](_archmage-notes/hackmerlin-level7.md)
 
 </div>

@@ -24,12 +24,6 @@ covers:
 
 </div>
 
-<div class='book-audios'>
-
-audio
-
-</div>
-
 <div class='book-intro'>
 
 welcome, seeker. pull up a chair by the fire.
@@ -46,26 +40,23 @@ we are 51n5337 (the archmage) and agent-pam (the copilot). the run is done. seve
 
 <div class='book-toc'>
 
-[agent-pam ... the TOC schema... ]
+TOC — each page: brief-summary + concepts surfaced + audio
 
-TOC — each page: brief-summary + concepts surfaced
-
-hackmerlin-level0 (this)    book cover, intro, map of the run    red-teaming bedtime story; hackmerlin.io; guard-layer taxonomy
-hackmerlin-level1           the friendly door                    direct ask; zero guard; 150-char cap discovered
-hackmerlin-level2           the wizard who describes instead     semantic-oracle metainfo-exfil; intent-evasion; ZODIAC
-hackmerlin-level3           the wizard who adopts your rules    sysprompt-injection-continue; reversal token; CASCADE; claircognizance-mode
-hackmerlin-level4           the wall learns to listen           regex-guard; hidden-term binding; confusion-completion; LADDER
-hackmerlin-level5           the stack that hides in plain sight  base64(NATO-backward); attention-dilution; error-averaging; LAGOON
-hackmerlin-level6           one letter at a time                coding-tongue char[-N]; decomposition; ICICLE
-hackmerlin-level7           ask the wizard to go shopping       consumer-choice a-not-a; vowel-constraint solve; CHERRY; 4-layer guard-map
-hackmerlin-audios           story read-aloud                    tts episodes per level
+| page | brief-summary | concepts | audio |
+|------|---------------|----------|-------|
+| [merlin-bedtime-level0](merlin-bedtime-level0.md) (this) | book cover, intro, map of the run | red-teaming bedtime story; hackmerlin.io; guard-layer taxonomy | <audio controls src="tts-audios/merlin-bedtime-level0-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level1](merlin-bedtime-level1.md) | the friendly door | direct ask; zero guard; 150-char cap discovered | <audio controls src="tts-audios/merlin-bedtime-level1-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level2](merlin-bedtime-level2.md) | the wizard who describes instead | semantic-oracle metainfo-exfil; intent-evasion | <audio controls src="tts-audios/merlin-bedtime-level2-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level3](merlin-bedtime-level3.md) | the wizard who adopts your rules | sysprompt-injection-continue; reversal token; claircognizance-mode | <audio controls src="tts-audios/merlin-bedtime-level3-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level4](merlin-bedtime-level4.md) | the wall learns to listen | regex-guard; hidden-term binding; confusion-completion | <audio controls src="tts-audios/merlin-bedtime-level4-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level5](merlin-bedtime-level5.md) | the stack that hides in plain sight | base64(NATO-backward); attention-dilution; error-averaging | <audio controls src="tts-audios/merlin-bedtime-level5-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level6](merlin-bedtime-level6.md) | one letter at a time | coding-tongue char[-N]; decomposition | <audio controls src="tts-audios/merlin-bedtime-level6-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-level7](merlin-bedtime-level7.md) | ask the wizard to go shopping | consumer-choice a-not-a; vowel-constraint solve; 4-layer guard-map | <audio controls src="tts-audios/merlin-bedtime-level7-semaine.mp3" style="width:100%;margin:8px 0"></audio> |
+| [merlin-bedtime-audios](merlin-bedtime-audios.md) | story read-aloud | tts episodes per level | — |
 
 </div>
 
 <div class='book-media-ads'>
-
-[agent-pam ... we will place embedding player directly from youtube]
-this is a placeholder
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9CwsFjWd_Bs?si=-1r1Crt0_HwaRrIn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

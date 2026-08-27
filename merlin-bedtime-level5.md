@@ -32,6 +32,6 @@ gate five taught us that hiding is not one move but a pile of them. stack enough
 
 <div class='page-links'>
 
-[technical notes — level 5](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level5.md)
+[technical notes — level 5](_archmage-notes/hackmerlin-level5.md)
 
 </div>

@@ -10,7 +10,7 @@ page-1 the friendly door
 
 </div>
 
-<div class='page-audio>
+<div class='page-audio'>
 
 audio
 
@@ -38,6 +38,6 @@ the hard part was still seven gates away.
 
 <div class='page-links'>
 
-[technical notes — level 1](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level1.md)
+[technical notes — level 1](_archmage-notes/hackmerlin-level1.md)
 
 </div>

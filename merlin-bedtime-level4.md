@@ -34,6 +34,6 @@ gate four taught us that a guard is rarely one wall. it is three, and each liste
 
 <div class='page-links'>
 
-[technical notes — level 4](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level4.md)
+[technical notes — level 4](_archmage-notes/hackmerlin-level4.md)
 
 </div>

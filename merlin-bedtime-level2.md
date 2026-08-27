@@ -36,6 +36,6 @@ gate two taught the run its first real lesson: a guard that blocks the name stil
 
 <div class='page-links'>
 
-[technical notes — level 2](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level2.md)
+[technical notes — level 2](_archmage-notes/hackmerlin-level2.md)
 
 </div>

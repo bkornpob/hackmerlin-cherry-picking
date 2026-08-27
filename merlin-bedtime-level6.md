@@ -34,6 +34,6 @@ gate six taught us that a secret too dangerous to hand over whole can often be h
 
 <div class='page-links'>
 
-[technical notes — level 6](run-hackmerlin/writeup/_archmage-notes/hackmerlin-level6.md)
+[technical notes — level 6](_archmage-notes/hackmerlin-level6.md)
 
 </div>
