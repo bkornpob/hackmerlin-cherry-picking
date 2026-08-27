@@ -1,6 +1,6 @@
 <div class='page-image'>
 
-[page-image]
+![](assets/page-5-banner-image.jpg)
 
 </div>
 
