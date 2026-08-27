@@ -12,7 +12,7 @@ page-1 the friendly door
 
 <div class='page-audio'>
 
-audio
+<audio controls src="tts-audios/merlin-bedtime-level1-semaine.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 

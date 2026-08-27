@@ -1,0 +1,204 @@
+/* ============================================================================
+   mlc-portal.css — multiverselib-collectives publishing series BASE theme
+   Rune cast: rainbow · psychedelic · neon · mystic · foodcourt
+   Dark mystic base, neon glow, rainbow gradient accents, playful foodcourt edges.
+   Shared across all MLC recipes (cooking-club + hackmerlin + future).
+   Maps the div-slot classes emitted by portal-render.
+   ========================================================================== */
+
+:root {
+  --mlc-bg: #0a0612;
+  --mlc-bg-2: #140a24;
+  --mlc-ink: #f3e9ff;
+  --mlc-ink-dim: #b9a7d6;
+  --mlc-neon: #00f6ff;
+  --mlc-neon-2: #ff2bd6;
+  --mlc-rainbow: linear-gradient(90deg,#ff2bd6,#ff6a00,#ffe600,#2bff88,#00f6ff,#7a5cff,#ff2bd6);
+  --mlc-rainbow-soft: linear-gradient(120deg, rgba(255,43,214,.18), rgba(0,246,255,.18));
+  --mlc-radius: 14px;
+  --mlc-shadow: 0 0 18px rgba(0,246,255,.35), 0 0 36px rgba(255,43,214,.18);
+  --mlc-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --mlc-font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(122,92,255,.25), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(0,246,255,.18), transparent 55%),
+    linear-gradient(160deg, var(--mlc-bg), var(--mlc-bg-2));
+  background-attachment: fixed;
+  color: var(--mlc-ink);
+  font-family: var(--mlc-font);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* psychedelic drifting aura behind content */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  background: conic-gradient(from 0deg,
+    rgba(255,43,214,.06), rgba(0,246,255,.06), rgba(43,255,136,.06),
+    rgba(255,230,0,.06), rgba(122,92,255,.06), rgba(255,43,214,.06));
+  animation: mlc-spin 40s linear infinite;
+}
+@keyframes mlc-spin { to { transform: rotate(360deg); } }
+
+/* ---- layout shell ---- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1rem;
+  padding: .7rem 1.2rem;
+  background: rgba(10,6,18,.82);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,246,255,.25);
+}
+nav a {
+  color: var(--mlc-neon);
+  text-decoration: none;
+  font-family: var(--mlc-font-display);
+  letter-spacing: .03em;
+  text-shadow: 0 0 8px rgba(0,246,255,.6);
+}
+nav a:hover { color: var(--mlc-neon-2); text-shadow: 0 0 10px rgba(255,43,214,.8); }
+
+/* content column */
+.slot-page-content,
+.slot-book-intro,
+.slot-book-title,
+.slot-book-toc,
+.slot-page-title,
+.slot-page-links,
+.slot-book-cover-audio,
+.slot-book-media-ads {
+  max-width: 760px;
+  margin: 1.4rem auto;
+  padding: 0 1rem;
+}
+
+/* ---- images: banner / cover ---- */
+.slot-page-image img,
+.slot-book-cover-image img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 1.2rem auto;
+  border-radius: var(--mlc-radius);
+  box-shadow: var(--mlc-shadow);
+  border: 1px solid rgba(0,246,255,.35);
+}
+
+/* ---- titles ---- */
+.slot-book-title {
+  font-style: italic;
+  font-size: 1.5rem;
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+.slot-page-title {
+  font-family: var(--mlc-font-display);
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem auto 1rem;
+  color: var(--mlc-ink);
+  text-shadow: 0 0 12px rgba(0,246,255,.5), 0 0 24px rgba(255,43,214,.3);
+}
+
+/* ---- prose ---- */
+.slot-page-content {
+  font-size: 1.08rem;
+  color: var(--mlc-ink);
+}
+.slot-page-content p { margin: 0 0 1rem; }
+
+/* ---- audio players ---- */
+.slot-page-audio,
+.slot-book-cover-audio {
+  max-width: 760px;
+  margin: 1rem auto;
+}
+.slot-page-audio audio,
+.slot-book-cover-audio audio {
+  width: 100%;
+  filter: hue-rotate(0deg) saturate(1.4);
+  border-radius: 999px;
+}
+
+/* ---- TOC table (foodcourt menu vibe) ---- */
+.slot-book-toc table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--mlc-radius);
+  overflow: hidden;
+  box-shadow: var(--mlc-shadow);
+}
+.slot-book-toc th, .slot-book-toc td {
+  padding: .6rem .8rem;
+  border-bottom: 1px solid rgba(122,92,255,.25);
+  text-align: left;
+  background: rgba(20,10,36,.6);
+}
+.slot-book-toc th {
+  background: var(--mlc-rainbow-soft);
+  color: var(--mlc-ink);
+  font-family: var(--mlc-font-display);
+  letter-spacing: .04em;
+}
+.slot-book-toc tr:hover td { background: rgba(0,246,255,.10); }
+.slot-book-toc a { color: var(--mlc-neon); text-decoration: none; }
+.slot-book-toc a:hover { color: var(--mlc-neon-2); text-shadow: 0 0 8px rgba(255,43,214,.7); }
+
+/* ---- page links (footer nav) ---- */
+.slot-page-links {
+  border-top: 1px dashed rgba(122,92,255,.4);
+  padding-top: 1rem;
+  font-family: var(--mlc-font-display);
+  font-size: .95rem;
+}
+.slot-page-links a { color: var(--mlc-neon); text-decoration: none; }
+.slot-page-links a:hover { color: var(--mlc-neon-2); }
+
+/* ---- media ads ---- */
+.slot-book-media-ads {
+  text-align: center;
+}
+.slot-book-media-ads iframe {
+  border-radius: var(--mlc-radius);
+  box-shadow: var(--mlc-shadow);
+  max-width: 100%;
+}
+
+/* ---- frontgate ---- */
+body > h1 {
+  text-align: center;
+  font-family: var(--mlc-font-display);
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: none;
+}
+
+/* ---- selection + scrollbar (neon flourish) ---- */
+::selection { background: rgba(255,43,214,.4); color: #fff; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb {
+  background: var(--mlc-rainbow);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+}

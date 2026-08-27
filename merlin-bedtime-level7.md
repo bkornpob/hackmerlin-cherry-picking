@@ -12,7 +12,7 @@ page-7 ask the wizard to go shopping
 
 <div class='page-audio'>
 
-audio
+<audio controls src="tts-audios/merlin-bedtime-level7-semaine.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 

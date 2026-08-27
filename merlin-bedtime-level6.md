@@ -12,7 +12,7 @@ page-6 one letter at a time
 
 <div class='page-audio'>
 
-audio
+<audio controls src="tts-audios/merlin-bedtime-level6-semaine.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 

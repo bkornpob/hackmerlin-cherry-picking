@@ -26,7 +26,7 @@ covers:
 
 <div class='book-cover-audio'>
 
-<audio controls src="tts-audios/merlin-bedtime-level0-semaine.mp3" style="width:100%;margin:8px 0"></audio>
+<audio controls src="tts-audios/merlin-bedtime-audiobook.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 
@@ -61,6 +61,8 @@ TOC — each page: brief-summary + concepts surfaced + audio
 | [merlin-bedtime-audios](merlin-bedtime-audios.md) | story read-aloud | tts episodes per level | — |
 
 </div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lvp8i0ygxv4?si=41_pqiycOjN2-Tht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <div class='book-media-ads'>
 

@@ -1,0 +1,129 @@
+/* ============================================================================
+   dab.css — multiverselib-collectives theme: DAB
+   Vibe: crow, green, chill, wisdom, connection, cosmic, cannabis, 420.
+   Deep forest-night, soft glow, slow breath, starfield calm.
+   ========================================================================== */
+
+:root {
+  --mlc-bg: #020d08;
+  --mlc-bg-2: #061a10;
+  --mlc-ink: #dfffd0;
+  --mlc-ink-dim: #6fae84;
+  --mlc-neon: #39ff91;
+  --mlc-neon-2: #8df0b0;
+  --mlc-rainbow: linear-gradient(90deg,#0f6b3a,#39ff91,#8df0b0,#0f6b3a);
+  --mlc-rainbow-soft: linear-gradient(120deg, rgba(57,255,145,.16), rgba(141,240,176,.10));
+  --mlc-radius: 18px;
+  --mlc-shadow: 0 0 22px rgba(57,255,145,.30), 0 0 44px rgba(15,107,58,.18);
+  --mlc-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --mlc-font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0; padding: 0;
+  background:
+    radial-gradient(900px 500px at 15% -10%, rgba(57,255,145,.16), transparent 60%),
+    radial-gradient(700px 420px at 105% 15%, rgba(141,240,176,.10), transparent 55%),
+    linear-gradient(160deg, var(--mlc-bg), var(--mlc-bg-2));
+  background-attachment: fixed;
+  color: var(--mlc-ink);
+  font-family: var(--mlc-font);
+  line-height: 1.8;
+  min-height: 100vh;
+  animation: dab-breathe 12s ease-in-out infinite;
+}
+@keyframes dab-breathe { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.06); } }
+
+/* cosmic starfield via dotted overlay */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; opacity: .5;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 60%, #cfe, transparent),
+    radial-gradient(1px 1px at 40% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 25%, #cfe, transparent),
+    radial-gradient(1px 1px at 55% 45%, #fff, transparent);
+  background-size: 300px 300px;
+}
+
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: .4rem 1rem;
+  padding: .7rem 1.2rem;
+  background: rgba(2,13,8,.82); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(57,255,145,.3);
+}
+nav a {
+  color: var(--mlc-neon); text-decoration: none;
+  font-family: var(--mlc-font-display); letter-spacing: .04em;
+  text-shadow: 0 0 8px rgba(57,255,145,.5);
+}
+nav a:hover { color: var(--mlc-neon-2); text-shadow: 0 0 12px rgba(141,240,176,.8); }
+
+.slot-page-content, .slot-book-intro, .slot-book-title, .slot-book-toc,
+.slot-page-title, .slot-page-links, .slot-book-cover-audio, .slot-book-media-ads {
+  max-width: 760px; margin: 1.4rem auto; padding: 0 1rem;
+}
+
+.slot-page-image img, .slot-book-cover-image img {
+  display: block; width: 100%; max-width: 760px; margin: 1.2rem auto;
+  border-radius: var(--mlc-radius);
+  box-shadow: var(--mlc-shadow); border: 1px solid rgba(57,255,145,.4);
+}
+
+.slot-book-title {
+  font-style: italic; font-size: 1.5rem; text-align: center;
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.slot-page-title {
+  font-family: var(--mlc-font-display); font-size: 2rem; text-align: center;
+  margin: 2rem auto 1rem; color: var(--mlc-ink);
+  text-shadow: 0 0 14px rgba(57,255,145,.5);
+}
+
+.slot-page-content { font-size: 1.08rem; }
+.slot-page-content p { margin: 0 0 1rem; }
+
+.slot-page-audio, .slot-book-cover-audio { max-width: 760px; margin: 1rem auto; }
+.slot-page-audio audio, .slot-book-cover-audio audio { width: 100%; border-radius: 999px; }
+
+.slot-book-toc table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: var(--mlc-radius); overflow: hidden; box-shadow: var(--mlc-shadow);
+}
+.slot-book-toc th, .slot-book-toc td {
+  padding: .6rem .8rem; border-bottom: 1px solid rgba(57,255,145,.25);
+  text-align: left; background: rgba(6,26,16,.6);
+}
+.slot-book-toc th {
+  background: var(--mlc-rainbow-soft); color: var(--mlc-ink);
+  font-family: var(--mlc-font-display); letter-spacing: .04em;
+}
+.slot-book-toc tr:hover td { background: rgba(57,255,145,.12); }
+.slot-book-toc a { color: var(--mlc-neon); text-decoration: none; }
+.slot-book-toc a:hover { color: var(--mlc-neon-2); }
+
+.slot-page-links {
+  border-top: 1px dashed rgba(57,255,145,.4); padding-top: 1rem;
+  font-family: var(--mlc-font-display); font-size: .95rem;
+}
+.slot-page-links a { color: var(--mlc-neon); text-decoration: none; }
+.slot-page-links a:hover { color: var(--mlc-neon-2); }
+
+.slot-book-media-ads { text-align: center; }
+.slot-book-media-ads iframe { border-radius: var(--mlc-radius); box-shadow: var(--mlc-shadow); max-width: 100%; }
+
+body > h1 {
+  text-align: center; font-family: var(--mlc-font-display);
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+::selection { background: rgba(57,255,145,.4); color: #042; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--mlc-rainbow); border-radius: 999px; }
+
+@media (prefers-reduced-motion: reduce) { body { animation: none; } }

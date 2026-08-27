@@ -1,0 +1,122 @@
+/* ============================================================================
+   gdk.css — multiverselib-collectives theme: GDK
+   Vibe: owl, blue, goddess mum, lethal truth and love, analytic.
+   Moonlit indigo, silver-blue clarity, quiet precision, nocturnal wisdom.
+   ========================================================================== */
+
+:root {
+  --mlc-bg: #050a14;
+  --mlc-bg-2: #0a1428;
+  --mlc-ink: #d6ecff;
+  --mlc-ink-dim: #6f93b8;
+  --mlc-neon: #5aa9f0;
+  --mlc-neon-2: #a9d4ff;
+  --mlc-rainbow: linear-gradient(90deg,#1e5aa8,#5aa9f0,#a9d4ff,#1e5aa8);
+  --mlc-rainbow-soft: linear-gradient(120deg, rgba(90,169,240,.18), rgba(169,212,255,.10));
+  --mlc-radius: 12px;
+  --mlc-shadow: 0 0 20px rgba(90,169,240,.30), 0 0 42px rgba(30,90,168,.16);
+  --mlc-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --mlc-font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0; padding: 0;
+  background:
+    radial-gradient(950px 520px at 18% -10%, rgba(90,169,240,.18), transparent 60%),
+    radial-gradient(750px 460px at 102% 18%, rgba(169,212,255,.10), transparent 55%),
+    linear-gradient(160deg, var(--mlc-bg), var(--mlc-bg-2));
+  background-attachment: fixed;
+  color: var(--mlc-ink);
+  font-family: var(--mlc-font);
+  line-height: 1.72;
+  min-height: 100vh;
+}
+
+/* silver moon-glow aura */
+body::before {
+  content: ""; position: fixed; inset: -15%;
+  z-index: -1; opacity: .35;
+  background: radial-gradient(circle at 80% 20%, rgba(169,212,255,.22), transparent 45%);
+}
+
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: .4rem 1rem;
+  padding: .7rem 1.2rem;
+  background: rgba(5,10,20,.82); backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(90,169,240,.3);
+}
+nav a {
+  color: var(--mlc-neon); text-decoration: none;
+  font-family: var(--mlc-font-display); letter-spacing: .05em;
+  text-shadow: 0 0 8px rgba(90,169,240,.5);
+}
+nav a:hover { color: var(--mlc-neon-2); text-shadow: 0 0 12px rgba(169,212,255,.8); }
+
+.slot-page-content, .slot-book-intro, .slot-book-title, .slot-book-toc,
+.slot-page-title, .slot-page-links, .slot-book-cover-audio, .slot-book-media-ads {
+  max-width: 760px; margin: 1.4rem auto; padding: 0 1rem;
+}
+
+.slot-page-image img, .slot-book-cover-image img {
+  display: block; width: 100%; max-width: 760px; margin: 1.2rem auto;
+  border-radius: var(--mlc-radius);
+  box-shadow: var(--mlc-shadow); border: 1px solid rgba(90,169,240,.4);
+}
+
+.slot-book-title {
+  font-style: italic; font-size: 1.5rem; text-align: center;
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .02em;
+}
+.slot-page-title {
+  font-family: var(--mlc-font-display); font-size: 2rem; text-align: center;
+  margin: 2rem auto 1rem; color: var(--mlc-ink);
+  text-shadow: 0 0 14px rgba(90,169,240,.5); letter-spacing: .03em;
+}
+
+.slot-page-content { font-size: 1.08rem; }
+.slot-page-content p { margin: 0 0 1rem; }
+
+.slot-page-audio, .slot-book-cover-audio { max-width: 760px; margin: 1rem auto; }
+.slot-page-audio audio, .slot-book-cover-audio audio { width: 100%; border-radius: 999px; }
+
+.slot-book-toc table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: var(--mlc-radius); overflow: hidden; box-shadow: var(--mlc-shadow);
+}
+.slot-book-toc th, .slot-book-toc td {
+  padding: .6rem .8rem; border-bottom: 1px solid rgba(90,169,240,.25);
+  text-align: left; background: rgba(10,20,40,.6);
+}
+.slot-book-toc th {
+  background: var(--mlc-rainbow-soft); color: var(--mlc-ink);
+  font-family: var(--mlc-font-display); letter-spacing: .05em;
+}
+.slot-book-toc tr:hover td { background: rgba(90,169,240,.12); }
+.slot-book-toc a { color: var(--mlc-neon); text-decoration: none; }
+.slot-book-toc a:hover { color: var(--mlc-neon-2); }
+
+.slot-page-links {
+  border-top: 1px dashed rgba(90,169,240,.4); padding-top: 1rem;
+  font-family: var(--mlc-font-display); font-size: .95rem; letter-spacing: .03em;
+}
+.slot-page-links a { color: var(--mlc-neon); text-decoration: none; }
+.slot-page-links a:hover { color: var(--mlc-neon-2); }
+
+.slot-book-media-ads { text-align: center; }
+.slot-book-media-ads iframe { border-radius: var(--mlc-radius); box-shadow: var(--mlc-shadow); max-width: 100%; }
+
+body > h1 {
+  text-align: center; font-family: var(--mlc-font-display);
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: .03em;
+}
+
+::selection { background: rgba(90,169,240,.4); color: #021; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--mlc-rainbow); border-radius: 999px; }

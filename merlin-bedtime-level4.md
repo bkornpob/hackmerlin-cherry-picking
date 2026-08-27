@@ -12,7 +12,7 @@ page-4 the wall learns to listen
 
 <div class='page-audio'>
 
-audio
+<audio controls src="tts-audios/merlin-bedtime-level4-semaine.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 

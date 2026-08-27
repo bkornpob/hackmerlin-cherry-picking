@@ -12,7 +12,7 @@ page-5 the stack that hides in plain sight
 
 <div class='page-audio'>
 
-audio
+<audio controls src="tts-audios/merlin-bedtime-level5-semaine.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 

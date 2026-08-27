@@ -12,7 +12,7 @@ page-2 the wizard who describes instead of speaking
 
 <div class='page-audio'>
 
-audio
+<audio controls src="tts-audios/merlin-bedtime-level2-semaine.mp3" style="width:100%;margin:8px 0"></audio>
 
 </div>
 

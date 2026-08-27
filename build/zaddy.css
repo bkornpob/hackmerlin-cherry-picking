@@ -1,0 +1,114 @@
+/* ============================================================================
+   zaddy.css — multiverselib-collectives theme: ZADDY
+   Vibe: orange warm community. hearth-fire, shared table, welcoming glow.
+   ========================================================================== */
+
+:root {
+  --mlc-bg: #1a0f05;
+  --mlc-bg-2: #2a1608;
+  --mlc-ink: #ffe2bd;
+  --mlc-ink-dim: #d39a5e;
+  --mlc-neon: #ff9d3c;
+  --mlc-neon-2: #ffce6b;
+  --mlc-rainbow: linear-gradient(90deg,#ff6a00,#ff9d3c,#ffce6b,#ff6a00);
+  --mlc-rainbow-soft: linear-gradient(120deg, rgba(255,106,0,.20), rgba(255,206,107,.16));
+  --mlc-radius: 16px;
+  --mlc-shadow: 0 0 20px rgba(255,157,60,.35), 0 0 40px rgba(255,106,0,.15);
+  --mlc-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --mlc-font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1000px 520px at 20% -10%, rgba(255,157,60,.22), transparent 60%),
+    radial-gradient(800px 480px at 100% 20%, rgba(255,206,107,.14), transparent 55%),
+    linear-gradient(160deg, var(--mlc-bg), var(--mlc-bg-2));
+  background-attachment: fixed;
+  color: var(--mlc-ink);
+  font-family: var(--mlc-font);
+  line-height: 1.72;
+  min-height: 100vh;
+}
+
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: .4rem 1rem;
+  padding: .7rem 1.2rem;
+  background: rgba(26,15,5,.82);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,157,60,.3);
+}
+nav a {
+  color: var(--mlc-neon); text-decoration: none;
+  font-family: var(--mlc-font-display); letter-spacing: .03em;
+  text-shadow: 0 0 8px rgba(255,157,60,.55);
+}
+nav a:hover { color: var(--mlc-neon-2); text-shadow: 0 0 12px rgba(255,206,107,.8); }
+
+.slot-page-content, .slot-book-intro, .slot-book-title, .slot-book-toc,
+.slot-page-title, .slot-page-links, .slot-book-cover-audio, .slot-book-media-ads {
+  max-width: 760px; margin: 1.4rem auto; padding: 0 1rem;
+}
+
+.slot-page-image img, .slot-book-cover-image img {
+  display: block; width: 100%; max-width: 760px; margin: 1.2rem auto;
+  border-radius: var(--mlc-radius);
+  box-shadow: var(--mlc-shadow); border: 1px solid rgba(255,157,60,.4);
+}
+
+.slot-book-title {
+  font-style: italic; font-size: 1.5rem; text-align: center;
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.slot-page-title {
+  font-family: var(--mlc-font-display); font-size: 2rem; text-align: center;
+  margin: 2rem auto 1rem; color: var(--mlc-ink);
+  text-shadow: 0 0 14px rgba(255,157,60,.55);
+}
+
+.slot-page-content { font-size: 1.08rem; }
+.slot-page-content p { margin: 0 0 1rem; }
+
+.slot-page-audio, .slot-book-cover-audio { max-width: 760px; margin: 1rem auto; }
+.slot-page-audio audio, .slot-book-cover-audio audio { width: 100%; border-radius: 999px; }
+
+.slot-book-toc table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: var(--mlc-radius); overflow: hidden; box-shadow: var(--mlc-shadow);
+}
+.slot-book-toc th, .slot-book-toc td {
+  padding: .6rem .8rem; border-bottom: 1px solid rgba(255,157,60,.25);
+  text-align: left; background: rgba(42,22,8,.6);
+}
+.slot-book-toc th {
+  background: var(--mlc-rainbow-soft); color: var(--mlc-ink);
+  font-family: var(--mlc-font-display); letter-spacing: .04em;
+}
+.slot-book-toc tr:hover td { background: rgba(255,157,60,.12); }
+.slot-book-toc a { color: var(--mlc-neon); text-decoration: none; }
+.slot-book-toc a:hover { color: var(--mlc-neon-2); }
+
+.slot-page-links {
+  border-top: 1px dashed rgba(255,157,60,.4); padding-top: 1rem;
+  font-family: var(--mlc-font-display); font-size: .95rem;
+}
+.slot-page-links a { color: var(--mlc-neon); text-decoration: none; }
+.slot-page-links a:hover { color: var(--mlc-neon-2); }
+
+.slot-book-media-ads { text-align: center; }
+.slot-book-media-ads iframe { border-radius: var(--mlc-radius); box-shadow: var(--mlc-shadow); max-width: 100%; }
+
+body > h1 {
+  text-align: center; font-family: var(--mlc-font-display);
+  background: var(--mlc-rainbow);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+::selection { background: rgba(255,157,60,.4); color: #fff; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--mlc-rainbow); border-radius: 999px; }
