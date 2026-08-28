@@ -10,7 +10,8 @@
 
    Metadata scheme (locked):
      levels[].page-link      -> primary navigation href (used as option value)
-     levels[].technical-link -> deeper-dive source (optgroup "Technical notes")
+     levels[].technical-link -> deeper-dive source, rendered as a per-PAGE footer
+                                link ("rabbit hole"), NOT in the nav dropdown
      levels[].file           -> fallback href if page-link absent
    ========================================================================== */
 (function () {
@@ -62,21 +63,6 @@
       gPages.appendChild(o);
     });
     sel.appendChild(gPages);
-
-    var hasTech = levels.some(function (l) { return l["technical-link"]; });
-    if (hasTech) {
-      var gTech = document.createElement("optgroup");
-      gTech.label = "Technical notes";
-      levels.forEach(function (l) {
-        var v = norm(l["technical-link"]);
-        if (!v) return;
-        var o = document.createElement("option");
-        o.value = v;
-        o.textContent = "lvl " + l.page + " notes";
-        gTech.appendChild(o);
-      });
-      sel.appendChild(gTech);
-    }
 
     sel.addEventListener("change", function () {
       if (sel.value) location.href = sel.value;

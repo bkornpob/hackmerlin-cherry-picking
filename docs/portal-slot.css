@@ -151,3 +151,26 @@
 .slot-book-intro a:hover {
   text-decoration: underline;
 }
+
+/* footer "rabbit hole" technical-notes link (per page, not in nav) */
+.slot-tech-link-wrap {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 90, 140, 0.25);
+  text-align: center;
+}
+.slot-tech-link a {
+  display: inline-block;
+  color: var(--accent, #ff5a8c);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent, #ff5a8c);
+  border-radius: 8px;
+}
+.slot-tech-link a:hover {
+  background: var(--accent, #ff5a8c);
+  color: #140a24;
+  text-decoration: none;
+}
