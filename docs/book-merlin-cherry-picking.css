@@ -12,9 +12,11 @@
   --cp-glow: 0 0 10px rgba(255, 46, 99, 0.55), 0 0 22px rgba(255, 138, 61, 0.30);
 }
 
-/* ---- nav dropdowns: distinct per-box styling ---- */
+/* ---- nav dropdowns: distinct per-box styling (OG theme only) ----
+   Other themes (zaddy/dab/gdk) provide their own coherent .nav-select colors;
+   the cherry/orange/pink distinctness is the OG-book expression. ---- */
 /* page-nav: cherry */
-.nav-select#pageNav {
+html[data-theme="og"] .nav-select#pageNav {
   background: linear-gradient(160deg, #2a0712, #4a0d20);
   color: var(--cp-cherry);
   border: 1px solid var(--cp-cherry);
@@ -24,10 +26,10 @@
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.nav-select#pageNav option { background: #2a0712; color: #ffd0dc; }
+html[data-theme="og"] .nav-select#pageNav option { background: #2a0712; color: #ffd0dc; }
 
 /* book-nav: wizard orange */
-.nav-select#bookNav {
+html[data-theme="og"] .nav-select#bookNav {
   background: linear-gradient(160deg, #2c1404, #4d2607);
   color: var(--cp-wizard);
   border: 1px solid var(--cp-wizard);
@@ -37,10 +39,10 @@
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.nav-select#bookNav option { background: #2c1404; color: #ffe2c4; }
+html[data-theme="og"] .nav-select#bookNav option { background: #2c1404; color: #ffe2c4; }
 
 /* themeSelect: liminal pink (vibe) */
-#themeSelect {
+html[data-theme="og"] #themeSelect {
   background: linear-gradient(160deg, #2a0820, #4a0d3a);
   color: var(--cp-liminal);
   border: 1px solid var(--cp-liminal);
@@ -50,7 +52,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
 }
-#themeSelect option { background: #2a0820; color: #ffd6f4; }
+html[data-theme="og"] #themeSelect option { background: #2a0820; color: #ffd6f4; }
 
 /* ---- content expression: this book's voice ---- */
 .slot-book-title {

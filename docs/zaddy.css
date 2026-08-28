@@ -49,6 +49,18 @@ nav a {
 }
 nav a:hover { color: var(--mlc-neon-2); text-shadow: 0 0 12px rgba(255,206,107,.8); }
 
+/* nav dropdowns: coherent warm-amber (book per-box distinctness is OG-only) */
+.nav-select, #themeSelect {
+  background: linear-gradient(160deg, #2a1608, #4a2607);
+  color: var(--mlc-neon);
+  border: 1px solid var(--mlc-neon);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,157,60,.4);
+  font-family: var(--mlc-font-display); font-weight: 700; letter-spacing: .03em;
+  padding: .25rem .5rem; font-size: .9rem;
+}
+.nav-select option, #themeSelect option { background: #2a1608; color: var(--mlc-ink); }
+
 .slot-page-content, .slot-book-intro, .slot-book-title, .slot-book-toc,
 .slot-page-title, .slot-page-links, .slot-book-cover-audio, .slot-book-media-ads {
   max-width: 760px; margin: 1.4rem auto; padding: 0 1rem;
