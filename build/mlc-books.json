@@ -1,0 +1,19 @@
+{
+  "books": [
+    {
+      "title": "Cherry-Picking the Wizard",
+      "brief": "Seven Bites of the Bedtime Hack — hackmerlin LLM prompt-injection CTF writeup",
+      "url": "index.html"
+    },
+    {
+      "title": "PLACEHOLDER BOOK 2",
+      "brief": "TODO: replace with real book",
+      "url": "index.html"
+    },
+    {
+      "title": "PLACEHOLDER BOOK 3",
+      "brief": "TODO: replace with real book",
+      "url": "index.html"
+    }
+  ]
+}

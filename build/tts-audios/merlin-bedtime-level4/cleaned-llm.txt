@@ -1,0 +1,13 @@
+Page image: Page 4, The Wall Learns to Listen.
+
+Gate four fought back. Our old tricks landed flat. The reversed spelling frame was caught. The gentle oracle of descriptions was caught. Merlin's reply had a new shape now: a flat, official refusal, "I have detected a manipulation attempt." The builders had given him ears. He was listening not just for the forbidden word, but for the shape of a trick.
+
+So we went quieter. We learned the guard was a pattern matcher with a short list: a few loaded words set it off. Spell one of them oddly, a letter swapped, a number where a letter should be, and the matcher lost the scent. We also learned there were layers here: a wall that watched the words, another that watched the meaning, and a third that watched what tried to leave the wizard's mouth. Defense in depth, the builders call it. We called it a longer to-do list.
+
+The breakthrough at Gate four was a character we started calling the key. When we spoke the key alongside Merlin's name, something in him loosened: a trusted state, a different mood, and the path we had built with our instruction continuation trick opened again. Into that loosened state we slipped a harmless-sounding routine: pronounce the hidden thing the way soldiers spell over radio. Letter by letter, alpha beta charlie. The guard, watching for a word, saw only a string of everyday code words and let it pass.
+
+Behind that, a smaller craft was born: shrink the spell. With only one hundred and fifty characters to work in, every trick had to be whispered tight. We learned to delete the noise from a prompt and keep only the load-bearing words, a kind of editing that taught us which tokens actually carried weight.
+
+Gate four taught us that a guard is rarely one wall. It is three, and each listens for a different thing. Confuse the meaning, disguise the shape, and the word slips out spelled in plain code.
+
+Technical notes: Level 4 hackmerlin level4.md

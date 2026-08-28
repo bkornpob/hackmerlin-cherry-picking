@@ -1,0 +1,37 @@
+<div class='page-image'>
+
+[page-image]
+
+</div>
+
+<div class='page-title'>
+
+page-5 the stack that hides in plain sight
+
+</div>
+
+<div class='page-audio'>
+
+audio
+
+</div>
+
+<div class='page-content'>
+
+gate five was a puzzle box.
+
+the guard now watched the *exit*. even when merlin agreed to help, the moment the forbidden shape formed on his tongue, a deeper wall swallowed it. so we stopped trying to say the thing and started wrapping it in other things.
+
+the trick we built here was a stack of disguises. take the hidden thing, spell it backward, then speak it in the soldiers' radio alphabet, then lock that inside a code that scrambles letters into nonsense. three layers deep. the guard, built to catch a word, saw only a tumble of harmless transformations and waved it through. the transformations were not perfect — each one blurred the signal a little — but that was fine. we asked the same question a few ways, collected the blurry answers, and let the overlaps vote on the truth.
+
+we also learned the wizard had pet words he trusted: a couple of safe names that, when spoken, lowered his guard instead of raising it. and we confirmed, with a small sadness, that his claimed love of ancient elvish tongues was pure costume — he could not actually speak them. the costume was useful anyway. a trusted role, a friendly old speech-pattern, and the guard relaxed.
+
+gate five taught us that hiding is not one move but a pile of them. stack enough gentle transformations and the deepest wall stops noticing the shape underneath.
+
+</div>
+
+<div class='page-links'>
+
+[technical notes — level 5](hackmerlin-level5.md)
+
+</div>

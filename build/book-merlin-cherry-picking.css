@@ -1,0 +1,72 @@
+/* ============================================================================
+   book-merlin-cherry-picking.css — per-book theme for "Cherry-Picking the Wizard"
+   Loaded AFTER og.css + portal-slot.css on landing-page only (OG theme).
+   Groups nav-bar expression + content expression for this book.
+   Palette: cherry red / wizard neon-orange / liminal pink, dark mystic base.
+   ========================================================================== */
+
+:root {
+  --cp-cherry: #ff2e63;
+  --cp-wizard: #ff8a3d;
+  --cp-liminal: #ff6ad5;
+  --cp-glow: 0 0 10px rgba(255, 46, 99, 0.55), 0 0 22px rgba(255, 138, 61, 0.30);
+}
+
+/* ---- nav dropdowns: distinct per-box styling ---- */
+/* page-nav: cherry */
+.nav-select#pageNav {
+  background: linear-gradient(160deg, #2a0712, #4a0d20);
+  color: var(--cp-cherry);
+  border: 1px solid var(--cp-cherry);
+  border-radius: 10px;
+  box-shadow: var(--cp-glow);
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.nav-select#pageNav option { background: #2a0712; color: #ffd0dc; }
+
+/* book-nav: wizard orange */
+.nav-select#bookNav {
+  background: linear-gradient(160deg, #2c1404, #4d2607);
+  color: var(--cp-wizard);
+  border: 1px solid var(--cp-wizard);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 138, 61, 0.5);
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.nav-select#bookNav option { background: #2c1404; color: #ffe2c4; }
+
+/* themeSelect: liminal pink (vibe) */
+#themeSelect {
+  background: linear-gradient(160deg, #2a0820, #4a0d3a);
+  color: var(--cp-liminal);
+  border: 1px solid var(--cp-liminal);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 106, 213, 0.5);
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+#themeSelect option { background: #2a0820; color: #ffd6f4; }
+
+/* ---- content expression: this book's voice ---- */
+.slot-book-title {
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, var(--cp-cherry), var(--cp-wizard), var(--cp-liminal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(255, 46, 99, 0.25);
+}
+.slot-book-intro,
+.slot-book-toc {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+.slot-book-toc table { border: 1px solid rgba(255, 46, 99, 0.35); }
+.slot-book-toc a { color: var(--cp-wizard); }
+.slot-book-toc a:hover { color: var(--cp-cherry); text-shadow: var(--cp-glow); }

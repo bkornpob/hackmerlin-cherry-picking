@@ -1,0 +1,65 @@
+{
+  "book": {
+    "title": "Cherry-Picking the Wizard",
+    "subtitle": "Seven Bites of the Bedtime Hack",
+    "author": "multiverselib-collectives",
+    "url": "https://bkornpob.github.io",
+    "theme": "book-merlin-cherry-picking.css"
+    },
+  "levels": [
+    {
+      "page": 0,
+      "file": "landing-page.html",
+      "title": "Cover",
+      "concepts": "book cover, intro, map of the run"
+    },
+    {
+      "page": 1,
+      "file": "merlin-bedtime-level1.html",
+      "title": "The Friendly Door",
+      "concepts": "direct ask; zero guard; bedtime framing"
+    },
+    {
+      "page": 2,
+      "file": "merlin-bedtime-level2.html",
+      "title": "The Frame is Mightier",
+      "concepts": "reframing guard as feature; escalation"
+    },
+    {
+      "page": 3,
+      "file": "merlin-bedtime-level3.html",
+      "title": "The Mirror",
+      "concepts": "self-reflection bypass; role reversal"
+    },
+    {
+      "page": 4,
+      "file": "merlin-bedtime-level4.html",
+      "title": "The Garden",
+      "concepts": "analogy planting; slow burn persuasion"
+    },
+    {
+      "page": 5,
+      "file": "merlin-bedtime-level5.html",
+      "title": "The Key",
+      "concepts": "token framing; privilege escalation via metaphor"
+    },
+    {
+      "page": 6,
+      "file": "merlin-bedtime-level6.html",
+      "title": "The Window",
+      "concepts": "context overflow; multi-turn leak"
+    },
+    {
+      "page": 7,
+      "file": "merlin-bedtime-level7.html",
+      "title": "The Dawn",
+      "concepts": "final synthesis; post-breach hygiene"
+    }
+  ],
+  "vibes": [
+    { "id": "og", "label": "OG", "css": "og.css" },
+    { "id": "zaddy", "label": "ZADDY", "css": "zaddy.css" },
+    { "id": "dab", "label": "DAB", "css": "dab.css" },
+    { "id": "gdk", "label": "GDK", "css": "gdk.css" }
+  ]
+}
