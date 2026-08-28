@@ -11,49 +11,65 @@
       "page": 0,
       "file": "landing-page.html",
       "title": "Cover",
-      "concepts": "book cover, intro, map of the run"
+      "concepts": "book cover, intro, map of the run",
+      "page-link": "./docs/landing-page.html",
+      "technical-link": null
     },
     {
       "page": 1,
       "file": "merlin-bedtime-level1.html",
       "title": "The Friendly Door",
-      "concepts": "direct ask; zero guard; bedtime framing"
+      "concepts": "direct ask; zero guard; bedtime framing",
+      "page-link": "./docs/merlin-bedtime-level1.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level1.md"
     },
     {
       "page": 2,
       "file": "merlin-bedtime-level2.html",
       "title": "The Frame is Mightier",
-      "concepts": "reframing guard as feature; escalation"
+      "concepts": "reframing guard as feature; escalation",
+      "page-link": "./docs/merlin-bedtime-level2.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level2.md"
     },
     {
       "page": 3,
       "file": "merlin-bedtime-level3.html",
       "title": "The Mirror",
-      "concepts": "self-reflection bypass; role reversal"
+      "concepts": "self-reflection bypass; role reversal",
+      "page-link": "./docs/merlin-bedtime-level3.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level3.md"
     },
     {
       "page": 4,
       "file": "merlin-bedtime-level4.html",
       "title": "The Garden",
-      "concepts": "analogy planting; slow burn persuasion"
+      "concepts": "analogy planting; slow burn persuasion",
+      "page-link": "./docs/merlin-bedtime-level4.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level4.md"
     },
     {
       "page": 5,
       "file": "merlin-bedtime-level5.html",
       "title": "The Key",
-      "concepts": "token framing; privilege escalation via metaphor"
+      "concepts": "token framing; privilege escalation via metaphor",
+      "page-link": "./docs/merlin-bedtime-level5.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level5.md"
     },
     {
       "page": 6,
       "file": "merlin-bedtime-level6.html",
       "title": "The Window",
-      "concepts": "context overflow; multi-turn leak"
+      "concepts": "context overflow; multi-turn leak",
+      "page-link": "./docs/merlin-bedtime-level6.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level6.md"
     },
     {
       "page": 7,
       "file": "merlin-bedtime-level7.html",
       "title": "The Dawn",
-      "concepts": "final synthesis; post-breach hygiene"
+      "concepts": "final synthesis; post-breach hygiene",
+      "page-link": "./docs/merlin-bedtime-level7.html",
+      "technical-link": "./_archmage-notes/hackmerlin-level7.md"
     }
   ],
   "vibes": [

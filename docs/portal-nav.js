@@ -7,6 +7,11 @@
    Deterministic: onchange -> location.href = option value.
    NOTE: requires http(s) serving (fetch); opening build/*.html via file://
          will not load JSON. Serve with `czone serve` or any static server.
+
+   Metadata scheme (locked):
+     levels[].page-link      -> primary navigation href (used as option value)
+     levels[].technical-link -> deeper-dive source (optgroup "Technical notes")
+     levels[].file           -> fallback href if page-link absent
    ========================================================================== */
 (function () {
   "use strict";
@@ -27,28 +32,76 @@
     });
   }
 
-  function markCurrent(sel, items, key) {
+  // Deployed site root IS docs/ (GitHub Pages /docs preset), so repo-root
+  // relative links like ./docs/foo.html or ./_archmage-notes/foo.md resolve
+  // from the docs/ folder. Normalize to keep metadata working as-written:
+  //   ./docs/           -> ./
+  //   ./_archmage-notes/ -> ./notes/   (notes copied into docs/notes at build)
+  function norm(p) {
+    if (!p) return p;
+    return p.replace(/^\.\/docs\//, "./").replace(/^\.\/_archmage-notes\//, "./notes/");
+  }
+
+  // populate a <select> with optgroups: primary pages + technical notes
+  function populatePaged(sel, levels) {
+    if (!sel || !levels) return;
+    sel.innerHTML = "";
+    var ph = document.createElement("option");
+    ph.value = "";
+    ph.textContent = "jump to page";
+    sel.appendChild(ph);
+
+    var gPages = document.createElement("optgroup");
+    gPages.label = "Pages";
+    levels.forEach(function (l) {
+      var v = norm(l["page-link"] || l.file);
+      if (!v) return;
+      var o = document.createElement("option");
+      o.value = v;
+      o.textContent = "lvl " + l.page + ": " + l.title;
+      gPages.appendChild(o);
+    });
+    sel.appendChild(gPages);
+
+    var hasTech = levels.some(function (l) { return l["technical-link"]; });
+    if (hasTech) {
+      var gTech = document.createElement("optgroup");
+      gTech.label = "Technical notes";
+      levels.forEach(function (l) {
+        var v = norm(l["technical-link"]);
+        if (!v) return;
+        var o = document.createElement("option");
+        o.value = v;
+        o.textContent = "lvl " + l.page + " notes";
+        gTech.appendChild(o);
+      });
+      sel.appendChild(gTech);
+    }
+
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = sel.value;
+    });
+    markCurrent(sel, levels);
+  }
+
+  function markCurrent(sel, levels) {
     var base = location.pathname.split("/").pop();
-    items.forEach(function (it, i) {
-      if (it[key] === base) sel.selectedIndex = i + 1;
+    Array.prototype.forEach.call(sel.options, function (o, i) {
+      if (o.value && o.value.split("/").pop() === base) sel.selectedIndex = i;
     });
   }
 
   fetch(BOOK_META)
     .then(function (r) { return r.json(); })
     .then(function (data) {
-      var sel = document.getElementById("pageNav");
-      populate(sel, data.levels,
-        function (l) { return "lvl " + l.page + ": " + l.title; },
-        function (l) { return l.file; });
-      markCurrent(sel, data.levels, "file");
+      populatePaged(document.getElementById("pageNav"), data.levels || []);
     })
     .catch(function (e) { console.warn("portal-nav: book meta load failed", e); });
 
   fetch(CATALOG)
     .then(function (r) { return r.json(); })
     .then(function (data) {
-      populate(document.getElementById("bookNav"), data.books,
+      populate(document.getElementById("bookNav"), data.books || [],
         function (b) { return b.title; },
         function (b) { return b.url; });
     })
