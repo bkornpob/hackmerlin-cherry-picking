@@ -18,6 +18,10 @@
   "use strict";
   var BOOK_META = "hackmerlin-cherry-picking.json";
   var CATALOG = "mlc-books.json";
+  // Resolved book metadata: read the stable name from <meta name="portal-book">
+  // (injected by portal-render), falling back to the legacy hackmerlin file.
+  var META_TAG = document.querySelector('meta[name="portal-book"]');
+  var BOOK_META = (META_TAG && META_TAG.getAttribute("content")) || "hackmerlin-cherry-picking.json";
 
   function populate(sel, items, labelFn, valueFn) {
     if (!sel || !items) return;
