@@ -1,8 +1,8 @@
 /* ============================================================================
-   book-merlin-cherry-picking.css — per-book theme for "Cherry-Picking the Wizard"
-   Loaded AFTER og.css + portal-slot.css on landing-page only (OG theme).
-   Groups nav-bar expression + content expression for this book.
-   Palette: cherry red / wizard neon-orange / liminal pink, dark mystic base.
+   book-merlin-cherry-picking.css — per-book CONTENT VOICE for "Cherry-Picking the Wizard"
+   Loaded AFTER og.css + portal-slot.css + portal-nav.css on every book page.
+   Nav geometry + dropdown colors are owned by portal-nav.css (geometry) and the
+   active theme css (colors). This file styles CONTENT ONLY.
    ========================================================================== */
 
 :root {

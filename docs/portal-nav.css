@@ -1,0 +1,39 @@
+/* portal-nav.css — nav STRUCTURE + BASE BOX MODEL (theme-agnostic).
+   Loaded on EVERY page (frontgate + landing + chapter) AFTER the theme css.
+   Owns geometry ONLY: position, flex, alignment, sizing, padding.
+   Theme files (og/zaddy/dab/gdk) own color/border/glow/background.
+   NO color rules here — this file must never override a theme's palette.
+
+   Why this file exists: theme.js swaps <link id="mlc-theme">, so only ONE theme
+   css loads at a time. Any nav-geometry rule left in og.css disappears in
+   zaddy/dab/gdk. Centralizing geometry here (loaded on every page) kills the
+   drift that made non-OG dropdowns 64px tall (missing align-items:center). */
+
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap;
+  align-items: center;            /* THE fix: prevents flex-stretch to 64px logo */
+  gap: .4rem 1rem; padding: .7rem 1.2rem;
+}
+.nav-logo-link {
+  display: inline-flex; align-items: center; gap: .5rem;
+  margin-right: auto; line-height: 0;
+}
+.nav-brand {
+  font-size: 1rem; font-weight: 600; letter-spacing: .04em; line-height: 1.2;
+}
+.nav-logo { height: 64px; width: auto; display: block; border-radius: 6px; }
+
+/* dropdown base box — theme supplies background/color/border/glow */
+.nav-select, #themeSelect {
+  box-sizing: border-box;
+  padding: .25rem .5rem;
+  font-size: .9rem;
+  border-radius: 10px;
+}
+
+/* authorization-style gate: frontgate shows only logo + brand + themeSelect.
+   The page/book menus are present in the DOM on every page (shared markup);
+   they are simply hidden here until the seeker is "inside the book". */
+body[data-page="frontgate"] #pageNav,
+body[data-page="frontgate"] #bookNav { display: none; }

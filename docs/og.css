@@ -21,21 +21,8 @@
   --mlc-font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
 }
 
-/* top nav: fixed overlay, logo left, controls right */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: saturate(140%) blur(8px);
-  border-bottom: 1px solid rgba(120, 220, 255, 0.12);
-}
+/* nav geometry + logo + dropdown base box live in portal-nav.css (every page).
+   This file keeps ONLY OG theme color expression for the nav. */
 nav a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
@@ -45,43 +32,6 @@ nav a {
 }
 nav a:hover {
   color: #aaf4ff;
-}
-.nav-logo-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-right: auto;
-  line-height: 0;
-}
-.nav-brand {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.2;
-}
-.nav-logo {
-  height: 64px;
-  width: auto;
-  display: block;
-  border-radius: 6px;
-}
-#themeSelect {
-  margin-left: auto;
-  background: #fff;
-  color: #000;
-  border: 1px solid #888;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.9rem;
-}
-.nav-select {
-  background: #fff;
-  color: #000;
-  border: 1px solid #888;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.9rem;
 }
 
 * { box-sizing: border-box; }
@@ -113,19 +63,8 @@ body::before {
 }
 @keyframes mlc-spin { to { transform: rotate(360deg); } }
 
-/* ---- layout shell ---- */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem 1rem;
-  padding: .7rem 1.2rem;
-  background: rgba(10,6,18,.82);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,246,255,.25);
-}
+/* nav geometry owned by portal-nav.css. This is OG's second nav block — its
+   layout is now centralized; only the link color expression stays. */
 nav a {
   color: var(--mlc-neon);
   text-decoration: none;
